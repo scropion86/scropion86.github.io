@@ -1,14 +1,14 @@
 baseURL: 'https://scropion86.github.io/'
 languageCode: 'en-US'
-title: 'Kopi'
+title: 'Edge & Logic Blog'
 theme: 'kopi'
 params:
-  subtitle: 'A modern, fast, and responsive Hugo theme'
+  subtitle: 'I enjoy understanding how systems actually work—then building, automating, and sometimes breaking them to make them better. This blog covers APIs, backend systems, cloud infrastructure, automation workflows, and self-hosted tools. You’ll also find experiments, debugging notes, and real-world engineering patterns from things I actually work on. The goal is simple: turn complexity into something usable.'
   author:
-    name: "Kopi Author"
-    bio: "Passionate about web development, open source, and creating fast user experiences."
+    name: "Mohammed Lotfy"
+    bio: "I enjoy understanding how systems actually work—then building, automating, and sometimes breaking them to make them better. This blog covers APIs, backend systems, cloud infrastructure, automation workflows, and self-hosted tools. You’ll also find experiments, debugging notes, and real-world engineering patterns from things I actually work on. The goal is simple: turn complexity into something usable."
     link: "/about"
-    role: "Theme Developer"
+    role: "Owner"
 
 menus:
   main:
@@ -19,7 +19,7 @@ menus:
       identifier: 'topics'
       url: '#'
       weight: 20
-    - name: 'Hugo'
+    #- name: 'Hugo'
       parent: 'topics'
       pageRef: '/hugo'
       weight: 10
@@ -54,4 +54,4 @@ outputs:
     - HTML
     - RSS
     - JSON
-    - RADIO
+    #- RADIO
