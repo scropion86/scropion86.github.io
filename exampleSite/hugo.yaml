@@ -20,9 +20,9 @@ menus:
       url: '#'
       weight: 20
     #- name: 'Hugo'
-      parent: 'topics'
-      pageRef: '/hugo'
-      weight: 10
+    #  parent: 'topics'
+    #  pageRef: '/hugo'
+    #  weight: 10
     - name: 'About'
       url: '#'
       weight: 30
