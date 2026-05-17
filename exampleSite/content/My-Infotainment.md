@@ -27,7 +27,7 @@ I learned that since my car wasn't originally equipped with Android Auto, it was
 
 https://www.carlinkit.com/carlinkit4.0-cp2a
 
-![image.png](images/1.png)
+![image.png](/images/infotainment/1.png)
 
 I decided to try the Carlinkit 4.0, which promised to convert wired Apple CarPlay to Android Auto. However, I encountered issues with the aspect ratio and occasional freezes, leading me to return the product.
 
@@ -41,15 +41,15 @@ Upon receiving the device, I was pleased with its performance. It connected to m
 
 https://www.carlinkit.com/uhd660
 
-![image.png](images/2.png)
+![image.png](/images/infotainment/2.png)
 
 https://www.carlinkit.com/ambient
 
-![image.png](images/3.png)
+![image.png](/images/infotainment/3.png)
 
 https://www.carlinkit.com/tbox-plus
 
-![image.png](images/4.png)
+![image.png](/images/infotainment/4.png)
 
 **Conclusion**
 
