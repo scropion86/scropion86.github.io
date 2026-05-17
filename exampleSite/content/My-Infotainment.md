@@ -1,8 +1,8 @@
 ---
 title: "My Infotainment System and Android Auto"
 date: 2024-03-07T11:00:00+03:00
-draft: true
-tags: [ "Guide"]
+draft: false
+tags: [ "Infotainment", "Android Auto", "Car Technology"]
 publishDate: 2024-03-07T11:00:00+03:00
 # expiryDate: 2030-05-01T11:00:00+07:00
 ---
