@@ -13,7 +13,7 @@
     </div>
 </div> -->
 
-<footer class="site-footer">
+<!-- <footer class="site-footer">
     <div class="container footer-content">
         <div>
             <strong class="footer-title">{{ .Site.Title }}</strong>
@@ -28,9 +28,54 @@
             <a href="#">RSS</a>
         </div>
     </div>
+</footer> -->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<footer class="site-footer">
+    <div class="container footer-content">
+
+        <div>
+            <strong class="footer-title">{{ .Site.Title }}</strong>
+
+            {{ with .Site.Params.subtitle }}
+            <span class="footer-subtitle">{{ . }}</span>
+            {{ end }}
+
+            <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+        </div>
+
+        <div class="footer-socials">
+
+            <a href="https://github.com/scropion86" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://x.com/scropion86" target="_blank" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.instagram.com/scropion86/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="/index.xml" target="_blank" aria-label="RSS">
+                <i class="fa-solid fa-rss"></i>
+            </a>
+
+            <a href="{{.Site.BaseURL}}" target="_blank" aria-label="Website">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+
+    </div>
 </footer>
 
 <!-- Back to Top Button -->
 <button id="backToTop" class="back-to-top" aria-label="Back to Top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
 </button>
