@@ -1,5 +1,7 @@
 # Kopi Theme - Setup & Development Guide
 
+> **Note:** This is an enhanced version of the original [Kopi theme](https://github.com/bect/kopi) by [bect](https://github.com/bect), updated and enhanced by [scropion86](https://github.com/scropion86).
+
 Complete guide for setting up and developing with the Kopi Hugo theme.
 
 ## Prerequisites

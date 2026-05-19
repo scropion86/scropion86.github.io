@@ -1,4 +1,6 @@
-# Contributing to Kopi
+# Contributing to Kopi (Enhanced Version)
+
+This is an enhanced fork of the original [Kopi theme](https://github.com/bect/kopi) by [bect](https://github.com/bect), maintained and enhanced by [scropion86](https://github.com/scropion86).
 
 First off, thanks for taking the time to contribute! ❤️
 

@@ -2,6 +2,8 @@
 
 A high-performance Hugo theme featuring dark mode, fast navigation with Turbo.js, advanced markdown support, and built-in author profiles. Perfect for blogs, technical documentation, and content-rich websites.
 
+> **Origin:** This theme is based on [kopi](https://github.com/bect/kopi) and has been updated and enhanced by [scropion86](https://github.com/scropion86).
+
 ## ✨ Features
 
 - **Fast Navigation** - Turbo.js for instant page transitions
@@ -82,6 +84,8 @@ This theme is licensed under the **MIT License**. See the LICENSE file for more 
 
 ## 🙏 Credits & Acknowledgements
 
+- **Original Theme** - [Kopi](https://github.com/bect/kopi) by [bect](https://github.com/bect)
+- **Enhanced by** - [scropion86](https://github.com/scropion86)
 - **Turbo.js** - Fast navigation library (https://turbo.hotwired.dev/)
 - **Mermaid.js** - Diagram rendering (https://mermaid.js.org/)
 - **Hugo** - Static site generator (https://gohugo.io/)
