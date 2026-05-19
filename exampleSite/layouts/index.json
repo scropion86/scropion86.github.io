@@ -1,5 +1,7 @@
 {{- $index := slice -}}
-{{- range .Site.RegularPages -}}
+{{- $pages := where .Site.RegularPages "Section" "!=" "authors" -}}
+{{- $pages = where $pages "Title" "!=" "About" -}}
+{{- range $pages -}}
     {{- $item := dict 
         "title" .Title 
         "permalink" .Permalink 

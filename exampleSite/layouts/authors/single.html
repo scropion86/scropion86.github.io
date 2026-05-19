@@ -1,0 +1,192 @@
+{{ define "main" }}
+{{ partial "breadcrumb.html" . }}
+
+<div class="content-grid">
+    <main>
+        <article>
+            <header class="author-header">
+                <div class="author-header-content">
+                    <div class="author-header-image">
+                        {{ with (or .Params.avatar_local .Params.avatar) }}<img src="{{ . }}" alt="{{ $.Title }}" class="author-avatar-large">{{ end }}
+                    </div>
+                    <div class="author-header-info">
+                        <h1 class="article-title">{{ .Title }}</h1>
+                        {{ with .Params.role }}<div class="author-role">{{ . }}</div>{{ end }}
+                        {{ with .Params.bio }}<p class="author-bio">{{ . }}</p>{{ end }}
+                    </div>
+                </div>
+            </header>
+
+            {{ if .Content }}
+            <section class="author-content">
+                <div class="author-details">
+                    {{ .Content }}
+                </div>
+            </section>
+            {{ end }}
+
+            <section class="author-posts">
+                <h2 class="section-title">Articles by {{ .Title }}</h2>
+                <div class="author-posts-grid">
+                        {{ $name := .Title }}
+                        {{ $pages := where .Site.RegularPages "Section" "!=" "authors" }}
+                        {{ $pages = where $pages "Title" "!=" "About" }}
+                        {{ range $pages }}
+                            {{ if or (eq .Params.author $name) (and (isset .Params "authors") (in .Params.authors $name)) }}
+                                {{ partial "post-card.html" (dict "page" . "class" "author-post-card" ) }}
+                            {{ end }}
+                        {{ end }}
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <div id="persistent-sidebar" data-turbo-permanent>
+        {{ partial "sidebar.html" . }}
+    </div>
+</div>
+
+<style>
+.author-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e5e5);
+}
+
+.author-header-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.author-header-image {
+    flex-shrink: 0;
+}
+
+.author-avatar-large {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent, #1e90ff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.author-header-info h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.author-role {
+    display: inline-block;
+    background-color: var(--accent, #1e90ff);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.author-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary, #666);
+    margin: 1rem 0 0 0;
+    font-style: italic;
+}
+
+.author-content {
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.author-details {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: inherit;
+}
+
+.author-details blockquote,
+.author-details > blockquote {
+    background-color: transparent;
+    border-left: 4px solid var(--accent, #1e90ff);
+    padding-left: 1.5rem;
+    margin-left: 0;
+    color: inherit;
+    font-style: normal;
+}
+
+.author-details h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color, #333);
+}
+
+.author-details h3 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-color, #333);
+}
+
+.author-details p {
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 3rem 0 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent, #1e90ff);
+}
+
+.author-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.author-post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.author-post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .author-header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .author-header-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .author-avatar-large {
+        width: 150px;
+        height: 150px;
+    }
+
+    .author-header-info h1 {
+        font-size: 2rem;
+    }
+
+    .author-posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+</style>
+{{ end }}

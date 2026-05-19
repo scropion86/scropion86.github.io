@@ -15,16 +15,16 @@ menus:
     - name: 'Home'
       pageRef: '/'
       weight: 10
-    - name: 'Topics'
-      identifier: 'topics'
-      url: '#'
-      weight: 20
+    # - name: 'Topics'
+    #   identifier: 'topics'
+    #   url: '#'
+    #   weight: 20
     #- name: 'Hugo'
     #  parent: 'topics'
     #  pageRef: '/hugo'
     #  weight: 10
     - name: 'About'
-      url: '#'
+      url: '/about'
       weight: 30
 
 module:

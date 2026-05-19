@@ -12,7 +12,10 @@
 <div class="content-grid">
     <main class="blog-feed">
         
-        {{ $paginator := .Paginator }}
+        {{/* Exclude author profile pages and About page from blog feed */}}
+        {{ $pages := where .Site.RegularPages "Section" "!=" "authors" }}
+        {{ $pages = where $pages "Title" "!=" "About" }}
+        {{ $paginator := .Paginate $pages }}
         {{ range $index, $page := $paginator.Pages }}
             {{ if and (eq $paginator.PageNumber 1) (eq $index 0) }}
             <!-- Featured Post (First Item of First Page) -->
